@@ -1,0 +1,9 @@
+{
+  "auths": {
+    "https://index.docker.io/v1/": {
+      "username": "a2Fya2FtcHJhc2hhbnRo",
+      "password": "ZGNrcl9wYXRfR1RLRUNnLXByM0UxS3FNYUZINGpYYmRnUGZn",
+      "auth": "a2Fya2FtcHJhc2hhbnRoOmRja3JfcGF0X0dUS0VDZy1wcjNFMUtxTWFGSDRqWGJkZ1BmZw=="
+    }
+  }
+}

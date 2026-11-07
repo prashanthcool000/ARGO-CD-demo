@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-1
+  namespace: cycle-ns
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      imagePullSecrets:
+        - name: dockerhub-secret 
+      containers:
+        - name: cycle-container
+          image: karkamprashanth/pratice:dm
+          ports:
+            - containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: cycle-cm

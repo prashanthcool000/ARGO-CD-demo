@@ -1,0 +1,11 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cycle-cm
+  namespace: cycle-ns
+data:
+  containerport: "80"
+  applicationlisten: "80"
+  application: "cycle-application"
+  env: "cycle-ns"
