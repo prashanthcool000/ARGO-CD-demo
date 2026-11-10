@@ -18,9 +18,16 @@ spec:
         - name: dockerhub-secret 
       containers:
         - name: cycle-container
-          image: karkamprashanth/pratice:dm
+          image: karkamprashanth/pratice:cycle
           ports:
             - containerPort: 80
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "100Mi"
+            limits:
+              cpu: "200m"
+              memory: "200Mi"
           envFrom:
             - configMapRef:
                 name: cycle-cm

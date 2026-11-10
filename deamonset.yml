@@ -3,7 +3,6 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: deamonset-1
-  namespace: cycle-ns
 spec:
   selector:
     matchLabels:
@@ -18,3 +17,11 @@ spec:
           image: karkamprashanth/task:cycle
           ports:
             - containerPort: 80
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "50Mi"
+            limits:
+              cpu: "100m"
+              memory: "100Mi"
+
